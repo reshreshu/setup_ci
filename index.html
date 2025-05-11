@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Pipeline Product Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#products">Products</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="home">
+    <h1>Welcome to Our DevOps Product Site</h1>
+    <p>This site is automatically deployed via Jenkins CI Pipeline.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We specialize in delivering DevOps solutions that streamline CI/CD pipelines, automate testing, and improve software delivery.</p>
+  </section>
+
+  <section id="products">
+    <h2>Our Products</h2>
+    <div class="product-card">
+      <h3>CI/CD Dashboard</h3>
+      <p>A unified interface to monitor all your DevOps pipelines.</p>
+    </div>
+    <div class="product-card">
+      <h3>Auto Deployer</h3>
+      <p>Push code to production in a click, with rollback support.</p>
+    </div>
+    <div class="product-card">
+      <h3>Monitoring Agent</h3>
+      <p>Real-time tracking of performance and logs across systems.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@devopscompany.com</p>
+    <p>Phone: +1 234 567 8900</p>
+  </section>
+
+  <div class="footer">
+    <p>Last updated: <span id="datetime"></span></p>
+  </div>
+
+  <script>
+    document.getElementById("datetime").textContent = new Date().toLocaleString();
+  </script>
+</body>
+</html>
