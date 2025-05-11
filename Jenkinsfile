@@ -18,14 +18,18 @@ pipeline {
 
         stage('Build HTML Page') {
             steps {
-                echo 'Copying HTML and CSS to output folder...'
-                sh 'mkdir -p output && cp index.html style.css output/'
+                echo 'Copying HTML, CSS, and images to output folder...'
+                sh '''
+                    mkdir -p output
+                    cp index.html style.css output/
+                    cp -r img output/
+                '''
             }
         }
 
         stage('Archive HTML') {
             steps {
-                echo 'Archiving HTML output...'
+                echo 'Archiving HTML, CSS, and images output...'
                 archiveArtifacts artifacts: 'output/**', fingerprint: true
             }
         }
