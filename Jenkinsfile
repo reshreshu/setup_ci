@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/reshreshu/devops_final_.git'
+                git branch: 'main', url: 'https://github.com/reshreshu/setup_ci.git'
             }
         }
 
